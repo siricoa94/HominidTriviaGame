@@ -76,5 +76,17 @@ var game = {
         $("#questionAnswer").append("<br>"+"</br>"+"Incorrect: "+game.incorrect);
         $("#questionAnswer").append("<br>"+"</br>"+"Unanswered: "+game.unanswered);
         $("#questionAnswer").append("<br>"+"</br>"+"<button id='reset'>RESET</button>");
-    }
+    },
+    clicked: function(e){
+        clearInterval(timer);
+        var correctAnswerDisplay = questions[game.currentQuestion].correctAnswer
+        var comparison = $(e.target).data("name");
+        if($(e.target).data("name") == questions[game.currentQuestion].correctAnswer){
+            game.answeredCorrectly();
+        } else {
+            game.answeredIncorrectly();
+        }
+    },
+    
+
 }
