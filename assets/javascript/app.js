@@ -97,6 +97,24 @@ var game = {
             setTimeout(game.nextQuestion, 3*1000);
         }
     },
+    answeredIncorrectly: function(){
+        clearInterval(timer);
+        game.incorrect ++;
+        $("#questionAnswer").html("<h2>WRONG</h2>");
+        $("#questionAnswer").append("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + "</h3>");
+        if(game.currentQuestion == questions.length -1){
+            setTimeout(game.results, 3*1000);
+        }
+    },
+    reset: function(){
+        game.currentQuestion = 0;
+        game.counter = 30;
+        game.correct = 0;
+        game.incorrect = 0;
+        game.unanswered = 0;
+        game.loadQuestion();
+    },
+
 
 
 }
