@@ -49,14 +49,10 @@ var game = {
     },
     nextQuestion: function(){
         game.counter = 30;
-        $("#timeLapse").html("<h2>OUT OF TIME</h2>");
-        $("#questionAnswer").html("<h3>The Correct Answer Was: " + questions[game.currentQuestion].correctAnswer + "</h3>");
-        if(game.currentQuestion == questions.length -1){
-            setTimeout(game.results, 3 *1000);
-        } else {
-            setTimeout(game.nextQuestion, 3*1000);
-        }
-
+        $("#timeLapse").html("time remaining: " + game.counter);
+        game.currentQuestion++;
+        game.loadQuestion();
+        
     },
     timeUp: function(){
         clearInterval(timer);
@@ -106,7 +102,6 @@ var game = {
             setTimeout(game.results, 3*1000);
         } else {
             setTimeout(game.nextQuestion, 3*1000);
-
         }
     },
     reset: function(){
