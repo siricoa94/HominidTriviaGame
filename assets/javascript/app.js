@@ -16,9 +16,9 @@ var questions = [{
     answers: ["8 million years","12 million years","4 million years","Two days ago"],
     correctAnswer: "8 million years"
 },{
-    question: "When is it thought that the split between the hominin lineage from gorillas and chimpanzees occured?",
-    answers: ["8 million years","12 million years","4 million years","Two days ago"],
-    correctAnswer: "8 million years"
+    question: "Out of the four, which is most closely related to the modern human?",
+    answers: ["Ankarapithecus","Chororapithecus","Ouranopithecus","Australopithecus"],
+    correctAnswer: "Australopithecus"
 
 }];
 
@@ -46,5 +46,16 @@ var game = {
             + i + '"data-name="'+questions[game.currentQuestion].answers[i]+'">'+questions[game.
                 currentQuestion].answers[i]+'</button>');
         }
+    },
+    nextQuestion: function(){
+        game.counter = 30;
+        $("#timeLapse").html("<h2>OUT OF TIME</h2>");
+        $("#questionAnswer").html("<h3>The Correct Answer Was: " + questions[game.currentQuestion].correctAnswer + "</h3>");
+        if(game.currentQuestion == questions.length -1){
+            setTimeout(game.results, 3 *1000);
+        } else {
+            setTimeout(game.nextQuestion, 3*1000);
+        }
+
     },
 }
