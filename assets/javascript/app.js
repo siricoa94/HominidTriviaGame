@@ -58,4 +58,15 @@ var game = {
         }
 
     },
+    timeUp: function(){
+        clearInterval(timer);
+        game.unanswered++;
+        $("#timeLapse").html("<h2>OUT OF TIME</h2>");
+        $("#questionAnswer").html("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + "</h3>");
+        if(game.currentQuestion == questions.length -1){
+            setTimeout(game.results, 3*1000);
+        } else {
+            setTimeout(game.nextQuestion, 3*1000);
+        }
+    },
 }
