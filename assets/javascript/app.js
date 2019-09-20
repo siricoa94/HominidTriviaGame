@@ -87,6 +87,16 @@ var game = {
             game.answeredIncorrectly();
         }
     },
-    
+    answeredCorrectly: function(){
+        clearInterval(timer);
+        game.correct ++;
+        $("#questionAnswer").html("<h2>GOOD JOB</h2>");
+        if(game.currentQuestion == questions.length -1){
+            setTimeout(game.results, 3*1000);
+        } else {
+            setTimeout(game.nextQuestion, 3*1000);
+        }
+    },
+
 
 }
