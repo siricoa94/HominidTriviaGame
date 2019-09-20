@@ -69,4 +69,12 @@ var game = {
             setTimeout(game.nextQuestion, 3*1000);
         }
     },
+    results: function(){
+        clearInterval(timer);
+        $("#questionAnswer").html("ALL DONE!");
+        $("#questionAnswer").append("<br>"+"</br>"+"Correct: "+game.correct);
+        $("#questionAnswer").append("<br>"+"</br>"+"Incorrect: "+game.incorrect);
+        $("#questionAnswer").append("<br>"+"</br>"+"Unanswered: "+game.unanswered);
+        $("#questionAnswer").append("<br>"+"</br>"+"<button id='reset'>RESET</button>");
+    }
 }
