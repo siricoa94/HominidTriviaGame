@@ -25,7 +25,7 @@ var questions = [{
 var game = {
     questions: questions,
     currentQuestion: 0,
-    counter: 30,
+    counter: 10,
     correct: 0,
     incorrect: 0,
     unanswered: 0,
@@ -40,7 +40,7 @@ var game = {
     loadQuestion: function(){
         timer = setInterval(game.countdown, 1000);
 
-        $("#questionAnswer").html("<h2>"+questions[game.currentQuestion].question+"</h2>");
+        $("#questionAnswer").html("<h2 id='questionAsk'>"+questions[game.currentQuestion].question+"</h2>");
         for(var i=0; i<questions[game.currentQuestion].answers.length;i++){
             $("#questionAnswer").append("<br>"+"</br>"+'<button class="answer-button" id="button' 
             + i + '"data-name="'+questions[game.currentQuestion].answers[i]+'">'+questions[game.
@@ -48,7 +48,7 @@ var game = {
         }
     },
     nextQuestion: function(){
-        game.counter = 30;
+        game.counter = 10;
         $("#gameTitle").html("TIME LEFT: " + game.counter);
         game.currentQuestion++;
         game.loadQuestion();
@@ -57,7 +57,7 @@ var game = {
     timeUp: function(){
         clearInterval(timer);
         game.unanswered++;
-        $("#gameTitle").html("<h2>OUT OF TIME</h2>");
+        $("#gameTitle").html("<h3>TIME OUT</h3>");
         $("#questionAnswer").html("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + "</h3>");
         if(game.currentQuestion == questions.length -1){
             setTimeout(game.results, 3*1000);
@@ -106,7 +106,7 @@ var game = {
     },
     reset: function(){
         game.currentQuestion = 0;
-        game.counter = 30;
+        game.counter = 10;
         game.correct = 0;
         game.incorrect = 0;
         game.unanswered = 0;
