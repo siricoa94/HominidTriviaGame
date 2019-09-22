@@ -1,12 +1,12 @@
 #start {
-    width: 100px;
     height: 50px;
     border-radius: 10rem;
     background-color:crimson;
     color:white;
     position: absolute;
-    left: 50%;
-    right: 50%;
+    width: 10%;
+    left: 45%;
+    right: 55%;
     bottom: 20%;
     top: 80%;
 
@@ -20,5 +20,27 @@ body{
 }
 #gameTitle{
     color: white;
+    position: absolute;
+    left: 40%;
+    right: 40%;
+    text-align: center;
+    top: 20%;
+}
+.answer-button{
+    height: 50px;
+    border-radius: 10rem;
+    background-color:crimson;
+    color:white;
+    width: 15%;
+    left: 47.5%;
+    right: 57.5%;
 
+}
+#questionAnswer{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    right: 20%;
+    text-align: center
 }
