@@ -44,3 +44,15 @@ body{
     right: 20%;
     text-align: center
 }
+#reset{
+    height: 50px;
+    border-radius: 10rem;
+    background-color:crimson;
+    color:white;
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    right: 55%;
+    top: 100%;
+
+}

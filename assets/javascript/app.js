@@ -32,7 +32,7 @@ var game = {
 
     countdown: function(){
         game.counter--;
-        $("#timeLapse").html("TIME LEFT: "+game.counter);
+        $("#gameTitle").html("TIME LEFT: "+game.counter);
         if(game.counter<=0){
             game.timeUp();
         }
@@ -49,7 +49,7 @@ var game = {
     },
     nextQuestion: function(){
         game.counter = 30;
-        $("#timeLapse").html("time remaining: " + game.counter);
+        $("#gameTitle").html("TIME LEFT: " + game.counter);
         game.currentQuestion++;
         game.loadQuestion();
         
@@ -57,7 +57,7 @@ var game = {
     timeUp: function(){
         clearInterval(timer);
         game.unanswered++;
-        $("#timeLapse").html("<h2>OUT OF TIME</h2>");
+        $("#gameTitle").html("<h2>OUT OF TIME</h2>");
         $("#questionAnswer").html("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + "</h3>");
         if(game.currentQuestion == questions.length -1){
             setTimeout(game.results, 3*1000);
