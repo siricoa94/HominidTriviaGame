@@ -20,6 +20,21 @@ var questions = [{
     answers: ["Ankarapithecus","Chororapithecus","Ouranopithecus","Australopithecus"],
     correctAnswer: "Australopithecus"
 
+},{
+    question: "What is a human considered out of the following?",
+    answers: ["Pongo abelii","Hylobatidae","Homo","Panina"],
+    correctAnswer: "Homo"
+
+},{
+    question: "How many extant species are included in the Hominidae family?",
+    answers: ["Four","Twelve","Five","Eight"],
+    correctAnswer: "Eight"
+
+},{
+    question: "Out of the four, which was the largest primate known to have ever walked the earth?",
+    answers: ["Ankarapithecus","Gigantopithecus","Gigarapithecus","Humongopithicus"],
+    correctAnswer: "Australopithecus"
+
 }];
 
 var game = {
@@ -111,6 +126,7 @@ var game = {
         game.incorrect = 0;
         game.unanswered = 0;
         game.loadQuestion();
+        // The below work as they should, but the start button that is generated does not respond to the on click command. To be assesed in future updates
         //$("#gameTitle").remove();
         // $("#questionAnswer").remove();
         // $("#reset").remove();
