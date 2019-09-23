@@ -1,16 +1,17 @@
+#startContainer {
+    width: 50%;
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    right: 25%;
+}
 #start {
-    height: 5% ;
+    position: absolute;
+    left: 47%;
+    right: 53%;
     border-radius: 10rem;
     background-color:crimson;
     color:white;
-    position: absolute;
-    width: 5%;
-    left: 48%;
-    right: 52%;
-    bottom: 20%;
-    top: 80%;
-    font-size: 90%;
-
 }
 #container{
     width: 90%;
@@ -56,14 +57,9 @@ body{
     font-size: 100%;
 }
 #reset{
-    height: 50px;
+    position: center;
     border-radius: 10rem;
     background-color:crimson;
     color:white;
-    position: absolute;
-    width: 10%;
-    left: 45%;
-    right: 55%;
-    top: 100%;
 
 }
