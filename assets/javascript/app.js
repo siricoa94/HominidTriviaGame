@@ -111,6 +111,10 @@ var game = {
         game.incorrect = 0;
         game.unanswered = 0;
         game.loadQuestion();
+        //$("#gameTitle").remove();
+        // $("#questionAnswer").remove();
+        // $("#reset").remove();
+        // $("#container").html('<button id="start">Start</button>')
     },
 
 
