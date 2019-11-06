@@ -14,3 +14,5 @@ The main use of this application is for entertainment and learning purposes.
 # Project Status
 
 App is operational, but will continue to be updated in later versions.
+
+![hominidGame](https://user-images.githubusercontent.com/50495407/68342064-cc033980-00b7-11ea-9be8-e78028169fc2.png)
